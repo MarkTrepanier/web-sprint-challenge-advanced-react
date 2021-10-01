@@ -4,7 +4,7 @@ import React, {useState} from "react";
 const useForm = (initialValue)=>{
     const [value, setValue] = useState(initialValue)
     const handleChanges=(evt)=>{
-        setValue({...value, [e.target.name]: e.targetvalue});
+        setValue({...value, [evt.target.name]: evt.target.value});
     }   
 
     return[value, setValue, handleChanges];
